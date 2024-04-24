@@ -1,0 +1,28 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+      - "3002:3002"
+    environment:
+      HTTP_PORT: "3002"
+      WS_PORT: "3001"
+      CORS_ORIGINS: "*"
+    develop:
+      watch:
+        - action: rebuild
+          path: ./backend
+          ignore:
+            - node_modules/
+
+  frontend:
+    build: 
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_BACKEND_URL: "http://192.168.1.53:3002"
+      REACT_APP_BACKEND_WS: "ws://192.168.1.53:3001"
+    depends_on:
+      - backend
+
