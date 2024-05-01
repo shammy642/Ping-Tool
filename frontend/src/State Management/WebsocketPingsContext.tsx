@@ -20,7 +20,7 @@ type WebsocketPingsProviderProps = {
 
 export const WebsocketPingsProvider = (props: WebsocketPingsProviderProps) => {
     const [pingInfo, setPingInfo] = useState<PingResult[] | undefined>();
-    const socketUrl = process.env.REACT_APP_BACKEND_WS ? process.env.REACT_APP_BACKEND_WS : 'ws://192.168.1.53:3001' ;
+    const socketUrl = process.env.REACT_APP_BACKEND_WS ? process.env.REACT_APP_BACKEND_WS : 'ws://localhost:3001' ;
 
     const { lastJsonMessage } = useWebSocket(socketUrl, {
         onOpen: () => console.log('WebSocket opened'),
