@@ -24,8 +24,8 @@ Ping Tool is a tool designed for the purpose of monitoring the responsiveness of
 
 ## Installation
 
--Clone this repository
--Make sure you have docker desktop installed
--Open a terminal in the root of the project and run:
+- Clone this repository
+- Make sure you have docker desktop installed
+- Open a terminal in the root of the project and run:
 ```docker-compose up```
--Go to http://localhost:3000
+- Go to http://localhost:3000
