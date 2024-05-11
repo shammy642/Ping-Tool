@@ -2,7 +2,7 @@
 ## For Flash Bang Brass / Box 9
 
 
-Ping Tool is a tool designed for the purpose of monitoring the responsiveness of Art-Net LED receivers on a network. It is a helper tool for [Box 9 Drumline](www.box9d.com) and [Flash Bang Brass](https://flashbangbrass.com) live performances to ensure LED receivers are performing as intended.
+Ping Tool is a tool designed for the purpose of monitoring the responsiveness of Art-Net LED receivers on a network. It is a helper tool for [Box 9 Drumline](https://box9d.com) and [Flash Bang Brass](https://flashbangbrass.com) live performances to ensure LED receivers are performing as intended.
 
 - Select predefined LED receivers you wish to monitor on the left
 - Monitor their responsiveness on the right
