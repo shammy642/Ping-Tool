@@ -277,7 +277,7 @@ export const receivers = [
         "device": "Singer 1",
         "type": "Bodypack",
         "name": "Singer 1",
-        "IP": "192.168.1.99"
+        "IP": "192.168.1.66"
     }
 ]
 
