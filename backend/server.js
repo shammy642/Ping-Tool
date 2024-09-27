@@ -27,7 +27,7 @@ console.log(hosts)
 const pingManager = new PingManager();
 
 app.listen(HTTP_PORT, () => {
-  console.log(`Server running at http://localhost:${HTTP_PORT}`);
+  console.log(`Server running at http://${IP_ADDRESS}:${HTTP_PORT}`);
 });
 
 app.get('/', (req, res) => {

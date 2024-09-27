@@ -28,7 +28,7 @@ export const ReceiverListProvider = (props: ReceiverListProps) => {
   }, []);
 
   const fetchData = () => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/`, {
       method: "GET",
     })
       .then((response) => response.json())

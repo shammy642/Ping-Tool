@@ -1,4 +1,12 @@
 services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+      - pgdata:/var/lib/postgresql/data 
+
   backend:
     build: ./backend
     ports:
@@ -7,6 +15,7 @@ services:
     environment:
       HTTP_PORT: "3002"
       WS_PORT: "3001"
+      IP_ADDRESS: "localhost"
       CORS_ORIGINS: "*"
     develop:
       watch:
@@ -14,6 +23,8 @@ services:
           path: ./backend
           ignore:
             - node_modules/
+    depends_on:
+      - db
 
   frontend:
     build: 
@@ -25,3 +36,6 @@ services:
       REACT_APP_BACKEND_WS: "ws://localhost:3001"
     depends_on:
       - backend
+
+volumes:
+  pgdata: 

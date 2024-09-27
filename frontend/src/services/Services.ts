@@ -1,5 +1,5 @@
 export const getDeviceList = () => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}`, {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/`, {
         method: "GET",
       })
         .then((response) => response.json())
